@@ -155,11 +155,9 @@
 							</li>
 						</c:forEach>
 					</ul>
-					
-					
+						
 					<!-- 分页标签 -->
-					<div class="pagebottom" id="pager" style="clear:both;">
-    						
+					<div class="pagebottom" id="pager" style="clear:both;">		
 					</div>
 					
 					
