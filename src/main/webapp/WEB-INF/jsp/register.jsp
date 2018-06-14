@@ -303,7 +303,8 @@
 						</div>
 					</div>
 					<!-- phone end -->
-					<!-- authcode -->
+					<!-- 
+					
 					<div class="item">
 						<span class="label"><b class="ftx04">*</b>验证码：</span>
 						<div class="fl">
@@ -320,6 +321,8 @@
 							<label id="authcode_error" class="null"></label>
 						</div>
 					</div>
+					 -->
+					
 					<!-- authcode end -->
 					<div class="item">
 						<span class="label">&nbsp;</span>
