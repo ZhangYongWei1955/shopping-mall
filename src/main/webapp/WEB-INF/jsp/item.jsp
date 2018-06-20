@@ -14,7 +14,7 @@
 		<link rel=stylesheet type=text/css href="${pageContext.request.contextPath}/res/css/main.css"/>
 		<!-- header.js输出头部信息 -->
 		<script type="text/javascript" src="${pageContext.request.contextPath}/res/js/header.js"></script>
-		<script type="${pageContext.request.contextPath}/res/text/javascript">
+		<script type="text/javascript">
 		//购买数量，失去焦点
 		function  blurFn(){
 			var domByNum = document.getElementById("buyNum");

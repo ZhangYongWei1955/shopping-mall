@@ -75,5 +75,28 @@ public class ArticleController {
 	}
 	
 	
+	@RequestMapping(value="buy.action")
+	public String getBuyPage(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+		request.setCharacterEncoding("utf-8");
+		String typecode = request.getParameter("typecode");
+
+		// 查询出所有的一级分类
+		List<ArticleTypeEntity> firstArticleTypes = ats.findAllFirstArticleType();
+		// 判断typecode是否有值 ，如果没有值则是第一次进入，获取第一个类型
+		if (typecode == null || typecode.equals("")) {
+			typecode = firstArticleTypes.get(0).getCode();
+		}
+		// 获取请求的一级物品类型，目的是展示在右边窗口左上角（如点击查询的是二级物品类型，则需截取前四位获取一级物品类型）
+		String firstArticleTypeCode = typecode.substring(0, 4);
+		ArticleTypeEntity firstArticleType = ats.findFirstArticleTypeByCode(firstArticleTypeCode);
+		request.setAttribute("typecode", typecode);
+		request.setAttribute("firstArticleType", firstArticleType);
+		request.setAttribute("firstArticleTypes", firstArticleTypes);
+		
+		
+		
+		
+		return "shopCar";
+	}
 	
 }

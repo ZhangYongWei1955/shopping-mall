@@ -1,0 +1,21 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd//mybatis-3-mapper.dtd">
+<mapper namespace="UserDao">
+	
+	<insert id="register" parameterType="User">
+	INSERT INTO tb_user(f_loginName,f_password,f_name,f_sex,f_email,f_phone,f_address,f_create_date) 
+	VALUES(#{loginName},#{password},#{name},#{sex},#{loginName},#{phone},#{address},NOW());
+	</insert>
+
+	<select id="login" resultMap="LoginEntity" parameterType="Map">
+	SELECT f_id,f_loginName,f_password FROM tb_user WHERE f_loginName=#{loginName} AND f_password=#{password};
+	</select>
+	
+	<resultMap type="LoginEntity" id="LoginEntity">
+		<id column="f_id" property="id"/>
+		<result column="f_loginName" property="loginName"/>
+		<result column="f_password" property="password"/>
+	</resultMap>
+	
+	
+</mapper>

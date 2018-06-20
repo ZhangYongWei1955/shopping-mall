@@ -174,12 +174,12 @@
 				//阻止事件的默认行为，表单提交
 				return false;
 			} else {
-
+				
 			}
 		}
 		//提交表单
 		document.getElementById("registerform").submit();
-		//swal('恭喜你', '注册成功,点击【OK】跳转到登录界面!', 'success');
+	//	swal('恭喜你', '注册成功,点击【OK】跳转到登录界面!', 'success');
 	};
 </script>
 </head>
@@ -210,7 +210,7 @@
 				<strong>注册新用户</strong>
 			</h2>
 			<span style="text-align: right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-			<span>我已经注册，现在就&nbsp;<a href="login.action">登录</a> </span>
+			<span>我已经注册，现在就&nbsp;<a href="login.do">登录</a> </span>
 		</div>
 		<div class="mc">
 			<ul class="tab">
@@ -278,7 +278,7 @@
 								value="2" name="sex" />女</label>
 						</div>
 					</div>
-					<!-- sex end -->
+					<!-- sex end -->	
 					<!-- address -->
 					<div class="item">
 						<span class="label"><b class="ftx04">*</b>详细地址：</span>

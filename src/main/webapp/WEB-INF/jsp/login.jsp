@@ -22,7 +22,7 @@
 			
 			//在页面完成加载时调用
 			window.onload = function(){
-				 document.getElementById("loginName").focus();
+				document.getElementById("loginName").focus();
 				document.onkeydown = function(){
 					// firefox没有window.event对象
 					var event = arguments[0] ? arguments[0] : window.event;
@@ -67,7 +67,7 @@
 	</div>
 	<!--header end-->
 	
-	<form name="loginform" method="post" action="login.do" id="loginform">
+	<form name="loginform" method="post" action="login.action" id="loginform">
 		<br />
 		<input type="hidden" name="method" value="submitTable"/>
 		<div class="login_main" style="background: url(${pageContext.request.contextPath}/res/images/login_bg.jpg) no-repeat center 0;">
