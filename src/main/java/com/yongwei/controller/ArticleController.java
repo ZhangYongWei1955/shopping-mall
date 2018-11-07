@@ -92,10 +92,7 @@ public class ArticleController {
 		request.setAttribute("typecode", typecode);
 		request.setAttribute("firstArticleType", firstArticleType);
 		request.setAttribute("firstArticleTypes", firstArticleTypes);
-		
-		
-		
-		
+
 		return "shopCar";
 	}
 	
